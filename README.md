@@ -1,17 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+https://wiki.trap.jp/document/r/%E6%9C%80%E9%80%9F%20traQ%20OAuth%20%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%20(with%20Next.js%20&%20Auth.js)
+
+のサンプルリポジトリです
+
+NeoShowcase を用いて https://authjs-traq-sample.trap.show にデプロイされています
+
+## ディレクトリ説明
+```
+src
+├── app
+│   ├── api/auth/[...nextauth]/route.ts
+│   |     Auth.js で使用する API ルート
+|   |
+|   ├── latestMessage/page.tsx
+|   │     最新のメッセージを表示するだけのページ
+|   |     アクセストークンの取得及び利用のサンプル
+|   |
+|   ├── signIn/page.tsx
+|   |     サインインのサンプル
+|   |
+|   └── whoami/page.tsx
+|         サインインしているユーザーの情報を表示するページ
+|         ユーザー情報の取得のサンプル
+|
+├── features/auth
+|   | Auth.js の設定関連をまとめたディレクトリ
+|   |
+|   ├── index.ts
+|   |     基本的にここで export したものを他のファイルから import して使う
+|   |
+|   ├── traqProvider.ts
+|   |     traQ 用の provider を定義
+|   |
+|   └── options.ts
+|         NextAuth に渡す設定を定義
+|
+└── types/auth.d.ts
+      accessToken を追加した User 型を定義
+```
+
+## ページ説明
+- `/` (https://authjs-traq-sample.trap.show)
+  `crete-next-app` で生成したページそのまま
+- `/latestMessage` (https://authjs-traq-sample.trap.show/latestMessage)
+  最新のメッセージを表示するだけのページ
+  認証していない場合は traQ の OAuth に飛びます
+- `/signIn` (https://authjs-traq-sample.trap.show/signIn)
+  サインインページ
+  ログインしていてもボタンは表示されます
+- `/whoami` (https://authjs-traq-sample.trap.show/whoami)
+  サインインしているユーザーの情報を表示するページ
+  ログインしていない場合はログインしてない旨が表示されます
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
