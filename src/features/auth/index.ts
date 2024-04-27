@@ -1,6 +1,4 @@
 import NextAuth from "next-auth";
-import { traqProvider } from "./traqProvider";
+import { options } from "./options";
 
-export const { handlers, signIn, auth, signOut } = NextAuth({
-  providers: [traqProvider],
-});
+export const { handlers, signIn, auth, signOut } = NextAuth(options);
