@@ -1,4 +1,4 @@
-https://wiki.trap.jp/document/r/%E6%9C%80%E9%80%9F%20traQ%20OAuth%20%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%20(with%20Next.js%20&%20Auth.js)
+[https://wiki.trap.jp/document/r/最速 traQ OAuth セットアップ (with Next.js & Auth.js)](https://wiki.trap.jp/document/r/%E6%9C%80%E9%80%9F%20traQ%20OAuth%20%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%20(with%20Next.js%20&%20Auth.js))
 
 のサンプルリポジトリです
 
