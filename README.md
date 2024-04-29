@@ -11,6 +11,9 @@ src
 │   ├── api/auth/[...nextauth]/route.ts
 │   |     Auth.js で使用する API ルート
 |   |
+│   ├── page.tsx
+│   |     色々つめこんだサンプル
+|   |
 |   ├── latestMessage/page.tsx
 |   │     最新のメッセージを表示するだけのページ
 |   |     アクセストークンの取得及び利用のサンプル
@@ -40,7 +43,7 @@ src
 
 ## ページ説明
 - `/` (https://authjs-traq-sample.trap.show)
-  `crete-next-app` で生成したページそのまま
+  できることを詰め込んだサンプルページ
 - `/latestMessage` (https://authjs-traq-sample.trap.show/latestMessage)
   最新のメッセージを表示するだけのページ
   認証していない場合は traQ の OAuth に飛びます
