@@ -1,11 +1,12 @@
 import { auth, signIn } from "@/features/auth";
+import { redirect } from "next/navigation";
 
 export default async function LatestMessage() {
   const session = await auth();
   const accessToken = session?.user?.accessToken;
 
   if (accessToken === undefined) {
-    await signIn("traq");
+    redirect("/signIn");
     return null;
   }
 

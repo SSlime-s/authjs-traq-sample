@@ -8,7 +8,9 @@ export default function SignIn() {
         await signIn("traq");
       }}
     >
-      <button type="submit">SignIn with traQ</button>
+      <button type="submit" className="border-black border p-2 m-2">
+        SignIn with traQ
+      </button>
     </form>
   );
 }
